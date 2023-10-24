@@ -27,8 +27,8 @@ def contact():
     return render_template("contact.html")
 
 
-@app.route("/sample-post")
-def contact():
+@app.route("/sample")
+def sample():
     return render_template("sample-post.html")
 
 
