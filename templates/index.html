@@ -43,13 +43,13 @@
                     <!-- Post preview-->
                     {% for blog_post in posts: %}
                     <div class="post-preview">
-                        <!-- <a href="{{ url_for('post', num=blog_post['id']) }}"> -->
+                        <a href="{{ url_for('post', num=blog_post['id']) }}">
                             <h2 class="post-title">{{ blog_post['title'] }}</h2>
                             <h4 class="post-subtitle">{{ blog_post['subtitle'] }}</h4>
                         </a>
                         <p class="post-meta">
                             Posted by
-                            <a href="#">{{ blog_post['author'] }}</a>
+                            <a href="{{ url_for('post', num=blog_post['id']) }}">{{ blog_post['author'] }}</a>
                             on {{ blog_post['date'] }}
                         </p>
                     </div>

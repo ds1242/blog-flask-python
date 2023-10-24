@@ -7,7 +7,7 @@ app = Flask(__name__)
 posts = requests.get('https://api.npoint.io/2fe1152e54348485537b').json()
 post_objects = []
 for post in posts:
-    post_obj = Post(post["id"], post["title"], post["subtitle"], post["body"], post["date"], post['author'])
+    post_obj = Post(post["id"], post["title"], post["subtitle"], post["body"], post["date"], post['author'], post['image_url'], post['image_alt'])
     post_objects.append(post_obj)
 
 
